@@ -20,10 +20,11 @@ export default {
       events: null
     }
   },
-  create() {
+  created() {
     EventService.getEvents()
     .then(response => {
       this.events = response.data
+      console.log(response.data)
     })
     .catch(error => {
       console.log(error)
