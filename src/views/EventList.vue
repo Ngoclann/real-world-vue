@@ -20,7 +20,7 @@ export default {
       events: null
     }
   },
-  create() {
+  created() {
     EventService.getEvents()
     .then(response => {
       this.events = response.data
